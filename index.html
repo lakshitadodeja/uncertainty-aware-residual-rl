@@ -42,7 +42,7 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
       <span aria-hidden="true"></span>
@@ -80,7 +80,7 @@
     </div>
 
   </div>
-</nav>
+</nav> -->
 
 
 <section class="hero">
@@ -88,39 +88,40 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">Accelerating Residual Reinforcement Learning with Uncertainty Estimation</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://lakshitadodeja.github.io/website/">Lakshita Dodeja</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=E2kpqtkAAAAJ&hl=en">Karl Schmeckpeper</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://shivamvats.com/">Shivam Vats</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://thomasweng.com/">Thomas Weng</a><sup>2</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://mingxi-jia.github.io/">Mingxi Jia</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://cs.brown.edu/people/gdk/">George Konidaris</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://h2r.cs.brown.edu/people/">Stefanie Tellex</a><sup>1,2</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Brown University,</span>
+            <span class="author-block"><sup>2</sup>Robotics and AI Institute</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://arxiv.org/pdf/2506.17564"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -128,7 +129,7 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://arxiv.org/abs/2011.12948"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -136,9 +137,9 @@
                   </span>
                   <span>arXiv</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -146,32 +147,79 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
-                  </a>
+                  </a> -->
             </div>
 
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Residual Reinforcement Learning (RL) is a popular approach for adapting pretrained policies by learning a 
+          lightweight residual policy that provides corrective actions. While Residual RL is more sample-efficient than
+          finetuning the entire base policy, existing methods struggle with sparse rewards and are designed for deterministic
+          base policies.We propose two improvements to Residual RL that further enhance its sample efficiency and make it
+          suitable for stochastic base policies.First, we leverage uncertainty estimates of the base policy to focus exploration
+          on regions in which the base policy is not confident. Second, we propose a simple modification to off-policy residual
+          learning that allows it to observe base actions and better handle stochastic base policies. We evaluate our method
+          with both Gaussian-based and Diffusion-based stochastic base policies on tasks from Robosuite and D4RL, and compare
+          against state-of-the-art finetuning methods, demo-augmented RL methods, and other residual RL methods. Our algorithm
+          significantly outperforms existing baselines in a variety of simulation benchmark environments. We also deploy our
+          learned policies in the real world to demonstrate their robustness with zero-shot sim-to-real transfer.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <video id="paper-video" autoplay muted loop playsinline height="100%">
+            <source src="./static/videos/paper_video.mp4"
+                    type="video/mp4">
+          </video>
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=IdBYu7AZtLAit2M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          <!-- <iframe src="https://www.youtube-nocookie.com/watch?v=43-o4tPCQyM"
+                  frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=OkK-VsHsqW0FYHAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->`
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
   </div>
 </section>
 
@@ -250,58 +298,7 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
 
 
 <section class="section">
