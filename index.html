@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+        content="Accelerating Residual Reinforcement Learning with Uncertainty Estimation">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accelerating Residual RL</title>
@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/robot_logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -41,47 +41,6 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav> -->
-
 
 <section class="hero">
   <div class="hero-body">
@@ -93,7 +52,7 @@
             <span class="author-block">
               <a href="https://lakshitadodeja.github.io/website/">Lakshita Dodeja</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=E2kpqtkAAAAJ&hl=en">Karl Schmeckpeper</a><sup>2</sup>,</span>
+              <a href="https://sites.google.com/view/karlschmeckpeper">Karl Schmeckpeper</a><sup>2</sup>,</span>
             <span class="author-block">
               <a href="https://shivamvats.com/">Shivam Vats</a><sup>1</sup>,
             </span>
@@ -121,7 +80,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2506.17564"
+                <a href="https://ieeexplore.ieee.org/document/11267054"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,25 +88,6 @@
                   <span>Paper</span>
                 </a>
               </span>
-              <!-- <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span> -->
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href=""
@@ -158,22 +98,43 @@
                   <span>Code (coming soon)</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a> -->
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<section class="hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+        <div class="content has-text-justified"><p style="font-size: 20px;">
+        TLDR : Residual RL is a powerful strategy for adapting a pretrained base policy to new environments
+        but standard Residual RL struggles with uncontrolled exploration and stochastic base policies. 
+        We propose two improvements to Residual RL that leverage uncertainty estimation to contain exploration 
+        and introduce an asymmetric actor-critic algorithm for off-policy learning.
+        </p>
+        </div>
+    </div>
+    <br>
+        <div class="publication-video">
+          <!-- <video id="paper-video" autoplay muted loop playsinline>
+            <source src="./static/videos/overview_mp4.mp4"
+                    type="video/mp4">
+          </video> -->
+          <!-- <iframe src="./static/videos/overview_mp4.mp4"
+                  frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=IdBYu7AZtLAit2M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          <!-- <iframe src="https://www.youtube-nocookie.com/watch?v=43-o4tPCQyM"
+                  frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=8TzfP1c2I12PIMCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+        
+
 </section>
 
 <section class="hero is-light">
@@ -203,25 +164,7 @@
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <!-- <video id="paper-video" autoplay muted loop playsinline>
-            <source src="./static/videos/overview_mp4.mp4"
-                    type="video/mp4">
-          </video> -->
-          <iframe src="./static/videos/overview_mp4.mp4"
-                  frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=IdBYu7AZtLAit2M4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-          <!-- <iframe src="https://www.youtube-nocookie.com/watch?v=43-o4tPCQyM"
-                  frameborder="0" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
-                  <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=OkK-VsHsqW0FYHAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->`
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
+
   </div>
 </section>
 
