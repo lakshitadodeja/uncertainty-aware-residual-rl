@@ -39,6 +39,7 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -90,20 +91,52 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href=""
+                <a href="https://github.com/lakshitadodeja/uncertainty_aware_residual_rl?tab=readme-ov-file"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code (coming soon)</span>
+                  <span>Code</span>
                   </a>
               </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=43-o4tPCQyM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2506.17564"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://twitter.com/YOUR_TWEET_OR_PROFILE"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa-brands fa-x-twitter"></i>
+                  </span>
+                  <span>Twitter</span>
+                </a>
+              </span>
             </div>
+          </div>
+          <div class="is-size-5">
+            <p style="font-size: 25px; color: darkmagenta;"><br>Accepted in IEEE Robotics and Automation Letters (RA-L)</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
 </section>
 
 <section class="hero is-light">
@@ -123,6 +156,25 @@
         <div class="publication-video">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/43-o4tPCQyM?si=8TzfP1c2I12PIMCL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
+    <br>
+    <h2 class="title"><br>Abstract</h2>
+    <div class="content has-text-justified"><p style="font-size: 20px;">
+        Residual Reinforcement Learning (RL) is a popular approach for adapting pretrained policies by
+        learning a lightweight residual policy that provides corrective actions. While Residual RL is more
+        sample-efficient than finetuning the entire base policy, existing methods struggle with sparse
+        rewards and are designed for deterministic base policies. We propose two improvements to Residual RL
+        that further enhance its sample efficiency and make it suitable for stochastic base policies. First,
+        we leverage uncertainty estimates of the base policy to focus exploration on regions in which the 
+        base policy is not confident. Second, we propose a simple modification to off-policy residual learning that 
+        allows it to observe base actions and better handle stochastic base policies. We evaluate our method 
+        with both Gaussian-based and Diffusion-based stochastic base policies on tasks from Robosuite and D4RL, 
+        and compare against state-of-the-art finetuning methods, demo-augmented RL methods, and other Residual 
+        RL methods. Our algorithm significantly outperforms existing baselines in a variety of simulation benchmark 
+        environments. We also deploy our learned policies in the real world to demonstrate their robustness with 
+        zero-shot sim-to-real transfer.
+        </p>
+        </div>
+        
     </div>
 </section>
 
@@ -143,14 +195,14 @@
   <div class="container is-max-desktop content">
     <h2 class="title">✨ Residual RL for stochastic base policies</h2>
         <div class="content has-text-justified"><p style="font-size: 20px;">
-        We optimize the Residual RL algorithm for stochastic policies using an asymmetric actor critic approach
+        Our second idea is to optimize the Residual RL algorithm for stochastic policies using an asymmetric actor critic approach
         where we learn the critic for the combined action (i.e. base action + residual action) and the actor for
-        only the residual action. <br>
-        Our findings reveal that using this architecture yields significant performance improvement for stochastic
-        base policies but both architectures work for deterministic base policies. 
-        </p>
+        only the residual action. <br></p>
+        
         </div>
         <img src="./static/images/complete_partial.png" alt="Stochastic Base Policies" class="publication-image">
+        <p style="font-size: 20px;">Our findings reveal that using this architecture yields significant performance improvement for stochastic
+        base policies but both architectures work for deterministic base policies. </p>
   </div>
 </section>
 
@@ -160,11 +212,11 @@
         <div class="content has-text-justified"><p style="font-size: 20px;">
          We conduct experiments with two kinds of uncertainty metrics (distance-to-data and ensemble variance)
         with both Gaussian mixture model and diffusion based base policies across multiple tasks and environments. 
-        We notice strong performance of our method over direct finetuning methods and other Residual RL methods
+        We notice strong performance of our method over direct finetuning methods and other Residual RL methods.
         </p>
-        <p style="font-size: 20px;"><b>Diffusion base policy :</b></p>
+        <p style="font-size: 20px;"><b>Diffusion base policy</b></p>
         <img src="./static/images/diffusion_updated_policy_decorator.png" alt="Diffusion Base Policies" class="publication-image">
-        <p style="font-size: 20px;"><b><br>GMM base policy :</b></p>
+        <p style="font-size: 20px;"><b><br>GMM base policy</b></p>
         <img src="./static/images/robomimic_v3.png" alt="GMM Base Policies" class="publication-image">
         <p style="font-size: 20px;"><b><br>Sim-to-Real-Transfer</b> <br>
         We also evaluate the learned policies in real world using sim-to-real transfer.</p>
