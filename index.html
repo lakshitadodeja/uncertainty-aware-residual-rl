@@ -100,21 +100,21 @@
                   </a>
               </span>
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=43-o4tPCQyM"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
                 <a href="https://arxiv.org/abs/2506.17564"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
                   </span>
                   <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=43-o4tPCQyM"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
                 </a>
               </span>
               <span class="link-block">
@@ -145,7 +145,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
         <div class="content has-text-justified"><p style="font-size: 20px;">
-        TLDR : Residual RL is a powerful strategy for adapting a pretrained base policy to new environments
+        <b>TLDR:</b> Residual RL is a powerful strategy for adapting a pretrained base policy to new environments
         but standard Residual RL struggles with uncontrolled exploration and stochastic base policies. 
         We propose two improvements to Residual RL that leverage uncertainty estimation to contain exploration 
         and introduce an asymmetric actor-critic algorithm for off-policy learning.
@@ -195,9 +195,9 @@
   <div class="container is-max-desktop content">
     <h2 class="title">✨ Residual RL for stochastic base policies</h2>
         <div class="content has-text-justified"><p style="font-size: 20px;">
-        Our second idea is to optimize the Residual RL algorithm for stochastic policies using an asymmetric actor critic approach
-        where we learn the critic for the combined action (i.e. base action + residual action) and the actor for
-        only the residual action. <br></p>
+       Our second idea is to optimize the Residual RL algorithm for stochastic policies using an asymmetric actor critic approach where:<br>
+        🤖 critic learns the value for the combined action (i.e. base action + residual action) <br>
+        🛠️ actor learns to predict only the residual action <br></p>
         
         </div>
         <img src="./static/images/complete_partial.png" alt="Stochastic Base Policies" class="publication-image">
